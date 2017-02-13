@@ -13,8 +13,9 @@
 ActiveRecord::Schema.define(version: 20170109021919) do
 
   create_table "items", force: :cascade do |t|
-    t.string   "name"
-    t.string   "color"
+    t.string   "message"
+    t.string   "gif_search"
+    t.string   "gif_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

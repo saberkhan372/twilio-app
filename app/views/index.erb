@@ -1,17 +1,44 @@
-<h1> Items </h1>
+<!DOCTYPE html>
+  <html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  </head>
+
+  <body>
+        <!--Import jQuery before materialize.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+          
+
+<h1> SMS </h1>
 
 <form method="post" action="/new">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-  <label for="color">Color</label>
-  <input type="text" id="color" name="color">
+  <label for="message">Message:</label>
+  <input type="text" id="message" name="message">
+  <label for="gif">Gif</label>
+  <input type="text" id="gif" name="gif_search">
   <input type="submit">
 </form>
 
-<ul>
+<table class="centered" class="striped">
+  <thead>
+  <tr>
+    <th data-field="message"> Message </th>
+    <th data-field="gif"> Gif search </th>
+    <th data-field="top"> Top gif </th>
+  </tr>
+</thead>
+
+<tbody>
   <% if @items %>
     <% @items.each do |item| %>
-      <li><%= item.name %> - <%= item.color %>
+    <tr>
+      <td><%= item.message %> </td>
+      <td> <%= item.gif_search %> </td>
+        <td> <img src = "<%= item.gif_url %>" /></td>
+        </tr>
     <% end %>
   <% end %>
-</ul>
+</tbody>
+</table>
+</body>
+ </html>
