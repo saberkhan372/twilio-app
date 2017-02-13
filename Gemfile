@@ -8,6 +8,7 @@ gem "rake"
 gem 'twilio-ruby'
 gem 'httparty'
 gem 'json'
+gem 'dotenv'
 
 group :production do
   gem 'pg'

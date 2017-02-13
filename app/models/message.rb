@@ -7,8 +7,8 @@ class Message
     @body = body
     @phone_number = phone_number
     # put your own credentials here
-    account_sid = 'ACbb7e13d853984761aa914000295999aa'
-    auth_token = '070e2c7f145706d9a487444ff71a5396'
+    account_sid = ENV['ACCOUNT_SID']
+    auth_token = ENV['AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token

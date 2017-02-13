@@ -17,6 +17,7 @@ GEM
     builder (3.2.3)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
+    dotenv (2.2.0)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
@@ -26,6 +27,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     multi_xml (0.6.0)
+    pg (0.19.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -72,8 +74,10 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  dotenv
   httparty
   json
+  pg
   pry
   rake
   sinatra
